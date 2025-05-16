@@ -19,7 +19,7 @@ function loadDashboard(url) {
 
 // Load default dashboard on page load
 document.addEventListener("DOMContentLoaded", function () {
-  loadDashboard("https://public.tableau.com/app/profile/oriel.mwaniki.alexander/viz/HBCUvsPWI_17438987223610/PWIDashboard");
+  loadDashboard("https://public.tableau.com/app/profile/oriel.mwaniki.alexander/viz/PublicInstitutionsOverall/PWIDashboard");
 
   // Optional: add export button handlers
   document.getElementById("exportPDF").addEventListener("click", function () {
