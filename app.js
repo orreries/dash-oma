@@ -1,17 +1,32 @@
 var viz;
 
-var vizURL = "https://public.tableau.com/views/HBCUvsPWI_17438987223610/PWIDashboard";
+function loadDashboard(url) {
+  const container = document.getElementById("vizContainer");
 
-var options = {
+  // Dispose of previous viz if it exists
+  if (viz) {
+    viz.dispose();
+  }
+
+  const options = {
     hideTabs: true,
     width: "100%",
     height: "800px"
-};
+  };
 
-function initViz() {
-    var containerDiv = document.getElementById("vizContainer");
-    viz = new tableau.Viz(containerDiv, vizURL, options);
+  viz = new tableau.Viz(container, url, options);
 }
 
-document.addEventListener("DOMContentLoaded", initViz);
+// Load default dashboard on page load
+document.addEventListener("DOMContentLoaded", function () {
+  loadDashboard("https://public.tableau.com/views/HBCUvsPWI_17438987223610/PWIDashboard");
 
+  // Optional: add export button handlers
+  document.getElementById("exportPDF").addEventListener("click", function () {
+    if (viz) viz.showExportPDFDialog();
+  });
+
+  document.getElementById("exportImage").addEventListener("click", function () {
+    if (viz) viz.showExportImageDialog();
+  });
+});
