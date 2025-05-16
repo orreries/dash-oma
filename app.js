@@ -4,7 +4,7 @@
     <title>Add Title Here</title>
 
     <script type="text/javascript"
-	    src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+	    src="https://public.tableau.com/views/HBCUvsPWI_17438987223610/PWIDashboard?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link.js"></script>
     <script type="text/javascript"></script>
 
 </head>
