@@ -1,26 +1,17 @@
-<html>
-<head>
+var viz;
 
-    <title>Add Title Here</title>
+var vizURL = "https://public.tableau.com/views/HBCUvsPWI_17438987223610/PWIDashboard";
 
-    <script type="text/javascript"
-	    src="https://public.tableau.com/app/profile/oriel.mwaniki.alexander/viz/HBCUvsPWI_17438987223610/PWIDashboard.js"></script>
-    <script type="text/javascript"></script>
+var options = {
+    hideTabs: true,
+    width: "100%",
+    height: "800px"
+};
 
-</head>
+function initViz() {
+    var containerDiv = document.getElementById("vizContainer");
+    viz = new tableau.Viz(containerDiv, vizURL, options);
+}
 
-<body>
+document.addEventListener("DOMContentLoaded", initViz);
 
-  <h1>Add Title Here</h1>
-
-    <button id = "exportPDF">Generate PDF</button>
-    <button id = "exportImage">Generate Image</button>
-
-
-    <div id="vizContainer"></div>
-
-    <script src="./app.js"></script>
-
-</body>
-
-</html>
