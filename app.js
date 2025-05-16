@@ -19,7 +19,7 @@ function loadDashboard(url) {
 
 // Load default dashboard on page load
 document.addEventListener("DOMContentLoaded", function () {
-  loadDashboard("https://public.tableau.com/app/profile/oriel.mwaniki.alexander/viz/PublicInstitutionsOverall/PWIDashboard");
+  loadDashboard("https://public.tableau.com/views/PublicInstitutionsOverall/PWIDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link");
 
   // Optional: add export button handlers
   document.getElementById("exportPDF").addEventListener("click", function () {
